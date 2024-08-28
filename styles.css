@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'PremierLeague-Heavy';
+  src: url('fonts/PremierLeague-Heavy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'PremierLeague-Heavy', sans-serif;  
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  background: #38003c;
+  color: #00ff85;
+  text-align: center;
+  padding: 1em 0;
+  font-family: 'PremierLeague-Heavy', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0 20px; /* Add some margin to separate the title from animations */
+}
+
+header h1 span {
+  display: inline-block;
+  position: relative;
+  font-size: 1.8em;
+  opacity: 0;
+}
+
+.animation-container {
+  width: 300px; /* Adjust as needed */
+  height: 500px; /* Adjust as needed */
+}
+
+#left-animation {
+  margin-right: 10px; /* Space between left animation and title */
+}
+
+#right-animation {
+  margin-left: 10px; /* Space between title and right animation */
+}
+
+header h1 span {
+  display: inline-block;
+  position: relative;
+  font-size: 1.8em; /* You can adjust the font size if needed */
+  opacity: 0;
+}
+#introduction img { /* Assuming your logo image has the ID 'logo' */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  animation: zoom 4s infinite; /* Add the animation back here */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1); /* Start at normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom in to 110% */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+section {
+  font-size: 24px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+}
+
+#introduction img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+button {
+  background-color: #00ff85;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00cc7a;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #38003c;
+  color: #fff;
+  bottom: 0;
+  width: 100%;
+  font-size: 27px;
+}
+
+footer a {
+  color: white;
+  font-size: 27px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 400%;
+}
+
+.slide {
+  width: 25%;
+  flex-shrink: 0; 
+  text-align: center;
+}
+
+
+.prev, 
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00ff85;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+#clock {
+  font-size: 75px;
+  color: #38003c;
+}
+#weather-info {
+  font-size: 75px; /* Adjust the font size value as needed */
+  color: #38003c;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens if needed */
+}
